@@ -82,3 +82,35 @@ film tablosunda bulunan tüm sütunlardaki verilerden title 'C' karakteri ile ba
 ~~~Sql
 select * from film WHERE title LIKE 'C%' AND LENGTH(TITLE) > 90 AND rental_rate =2.99;
 ~~~
+
+## <p id = 'Ödev 4' > Ödev 4 </p> 
+
+film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+
+~~~Sql
+select DISTINCT replacement_cost from film;
+~~~
+
+film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
+
+~~~Sql
+select count( DISTINCT (replacement_cost) )from film;
+~~~
+
+film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+
+~~~Sql
+select Count(title) from film where title like 'T%' and rating = 'G';
+~~~
+
+country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+
+~~~Sql
+select COUNT(country) from country where LENGTH(COUNTRY) = 5;
+~~~
+
+city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
+
+~~~Sql
+SELECT CITY FROM CITY WHERE CITY LIKE '%R' OR CITY LIKE '%r'
+~~~
