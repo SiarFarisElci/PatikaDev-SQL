@@ -4,7 +4,7 @@
 
 film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
 
-
+~~~Sql
 Select title , description from film;
 
 
