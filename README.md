@@ -372,3 +372,31 @@ Select first_name from customer;
 
 
 ## <p id = 'Ödev 12' > Ödev 12 </p> 
+
+film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+
+
+~~~Sql
+Select Count(*) from film where length > (Select AVG(length) from film);
+~~~
+film tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
+~~~Sql
+Select Count(*) from film where rental_rate = (select max(rental_rate) from film);
+~~~
+
+film tablosunda en düşük rental_rate ve en düşük replacement_cost değerlerine sahip filmleri sıralayınız.
+~~~Sql
+Select title from film where film_id = any 
+(
+Select film_id from film where rental_rate =(Select MIN(rental_rate) from film)
+And
+Replacement_cost = (Select MIN(replacement_cost) from film)
+
+);
+~~~
+payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+~~~Sql
+Select c.first_name, c.last_name  from customer as  c
+inner join payment as p on p.customer_id = c.customer_id
+where amount= (Select Max(amount) from payment);
+~~~
