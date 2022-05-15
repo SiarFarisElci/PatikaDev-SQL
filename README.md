@@ -1,5 +1,5 @@
 # PatikaDev-SQL
-ÖDEV1
+<p> ÖDEV1 <p>
 
 
 film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
