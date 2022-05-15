@@ -295,3 +295,57 @@ customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosunda
 ~~~Sql
 SELECT c.first_name, c.last_name, r.rental_id FROM customer as  c JOIN rental as  r ON( c.customer_id = r.customer_id );
 ~~~
+## <p id = 'Ödev 10' > Ödev 10 </p>
+
+city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+
+~~~Sql
+SELECT c.city, co.country FROM city as c LEFT JOIN country as co ON ( c.country_id = co.country_id );
+~~~
+
+customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+
+
+~~~Sql
+SELECT c.first_name, c.last_name, p.payment_id FROM customer as c RIGHT JOIN payment as p ON ( p.customer_id = c.customer_id);
+~~~
+
+customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+
+
+~~~Sql
+SELECT c.first_name, c.last_name, r.rental_id FROM customer as c FULL JOIN rental as r ON( c.customer_id = r.customer_id );
+~~~
+
+
+
+
+## <p id = 'Ödev 11' > Ödev 11 </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## <p id = 'Ödev 12' > Ödev 12 </p> 
