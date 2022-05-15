@@ -135,4 +135,28 @@ customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamad
 SELECT last_name from customer where store_id = 1 order by last_name desc limit 4;
 ~~~
 
+## <p id = 'Ödev 6' > Ödev 6 </p> 
 
+film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
+
+~~~Sql
+SELECT AVG(rental_rate) from film;
+~~~
+
+film tablosunda bulunan filmlerden kaç tanesi 'C' karakteri ile başlar?
+
+~~~Sql
+SELECT count(title) from  film where title like 'C%';
+~~~
+
+film tablosunda bulunan filmlerden rental_rate değeri 0.99 a eşit olan en uzun (length) film kaç dakikadır
+
+~~~Sql
+SELECT max(lenght) FROM FILM WHERE rental_rate = 0.99 ;
+~~~
+
+film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
+
+~~~Sql
+SELECT COUNT( DISTINCT replacement_cost )FROM film WHERE length > 150;
+~~~
